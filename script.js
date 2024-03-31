@@ -155,7 +155,7 @@ function showImage(rainaudio) {
 
             const lonelygirlaudio = new Audio('onelesslonelygirl.mp3');
             lonelygirlaudio.loop=true;
-            lonelygirlaudio.play()
+            lonelygirlaudio.play();
 
 
           });
