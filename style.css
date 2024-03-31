@@ -58,3 +58,17 @@ body {
   height: 150px;
   cursor: pointer;
 }
+
+#typing-text {
+  font-family: 'Papyrus';
+  color: rgb(222, 200, 200);
+  margin-top: 200px;
+  align-items: center;
+}
+
+.jb{
+  position: absolute;
+  align-items: center;
+  bottom:30%;
+  width: 400px;
+}
