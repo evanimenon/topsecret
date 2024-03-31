@@ -2,7 +2,7 @@ const button = document.querySelector('.musicbutton');
 const kazoomv = document.getElementById('kazoomv');
 let confettiInterval;
 //let rainaudio;
-const rainaudio = new Audio('itsraining.mp3');
+const rainaudio = new Audio('content/itsraining.mp3');
 
 
 const text1 = "So... you're finally one step closer to that old age home...\n\nMay your day be filled with the reminder of your impending doom and the joys of adult diapers";
@@ -31,7 +31,7 @@ function typeWriter(text, element) {
 
 // function to handle button click event
 function handleClick() {
-  const audio = new Audio('kazoo.mp3');
+  const audio = new Audio('content/kazoo.mp3');
   audio.volume = 0;
   button.disabled = true;
 
@@ -87,7 +87,7 @@ function addSecondButton() {
     document.body.appendChild(secondButton);
 
     secondButton.addEventListener('click', function() {
-      //const rainaudio = new Audio('itsraining.mp3');
+      //const rainaudio = new Audio('content/itsraining.mp3');
       rainaudio.volume = 0.2;
       rainaudio.play();
       document.body.removeChild(secondButton);
@@ -101,18 +101,18 @@ function addSecondButton() {
 // box -> unwrapped box -> open box
 function showImage(rainaudio) {
   const box = document.createElement('img');
-  box.src = 'giftbox.png';
+  box.src = 'content/giftbox.png';
   box.classList.add('pixelgift');
   document.body.appendChild(box);
 
   box.addEventListener('click', function(){
-    const audio = new Audio('unwrapping.mp3');
+    const audio = new Audio('content/unwrapping.mp3');
     audio.play();
 
     //replacing box -> unwrapped box
     setTimeout(() => {
       const boxunw = document.createElement('img');
-      boxunw.src='giftbox-unwrapped.png';
+      boxunw.src='content/giftbox-unwrapped.png';
       boxunw.classList.add('pixelgift-unwrapped');
       document.body.replaceChild(boxunw, box);
 
@@ -124,12 +124,12 @@ function showImage(rainaudio) {
 
       // replacing unwrapped box -> open box
       boxunw.addEventListener('click', function(){
-        const audio = new Audio('unwrapping.mp3');
+        const audio = new Audio('content/unwrapping.mp3');
         audio.play();
 
         setTimeout(() => {
           const boxope = document.createElement('img');
-          boxope.src='giftbox-open.png';
+          boxope.src='content/giftbox-open.png';
           boxope.classList.add('pixelgift-open');
           document.body.replaceChild(boxope, boxunw);
 
@@ -141,19 +141,19 @@ function showImage(rainaudio) {
 
           //replacing unwrapped box -> justin bieber
           boxope.addEventListener('click', function(){
-            const audio = new Audio('unwrapping.mp3');
+            const audio = new Audio('content/unwrapping.mp3');
             audio.play();
 
             setTimeout(() => {
               const jb = document.createElement('img');
-              jb.src='jb.png';
+              jb.src='content/jb.png';
               jb.classList.add('jb');
               document.body.replaceChild(jb, boxope);  
               rainaudio.pause();
               rainaudio.currentTime=0;
             }, 1000);
 
-            const lonelygirlaudio = new Audio('onelesslonelygirl.mp3');
+            const lonelygirlaudio = new Audio('content/onelesslonelygirl.mp3');
             lonelygirlaudio.loop=true;
             lonelygirlaudio.play();
 
