@@ -16,7 +16,7 @@ const typingText = document.getElementById("typing-text");
 // function to animate typing effect
 function typeWriter(text, element) {
   let i = 0;
-  const speed = 100;
+  const speed = 200;
 
   function type() {
     if (i < text.length) {
