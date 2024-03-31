@@ -157,7 +157,6 @@ function showImage(rainaudio) {
             lonelygirlaudio.loop=true;
             lonelygirlaudio.play();
 
-
           });
 
         }, 1000);
