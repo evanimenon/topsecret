@@ -153,8 +153,8 @@ function showImage(rainaudio) {
               rainaudio.currentTime=0;
             }, 1000);
 
-
             const lonelygirlaudio = new Audio('onelesslonelygirl.mp3');
+            lonelygirlaudio.loop=true;
             lonelygirlaudio.play()
 
 
